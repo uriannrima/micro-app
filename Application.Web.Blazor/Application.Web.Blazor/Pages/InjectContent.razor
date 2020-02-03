@@ -1,0 +1,26 @@
+﻿@page "/injectcontent"
+@inject IHttpClientFactory ClientFactory
+
+<h1>InjectContent</h1>
+
+<p>This component demonstrates injectin content from other service.</p>
+
+@if (Content == null)
+{
+    <p><em>Content loading...</em></p>
+}
+else
+{
+    @((MarkupString)Content)
+}
+
+@code {
+    private string Content { get; set; } = null;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var client = ClientFactory.CreateClient();
+        var response = await client.GetAsync(new Uri("http://localhost:8081/body")).ConfigureAwait(false);
+        Content = await response.Content.ReadAsStringAsync();
+    }
+}
