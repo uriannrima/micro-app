@@ -1,36 +1,42 @@
 import express from "express";
+import hypernova, { HypernovaContext } from "hypernova/server";
 
-const app = express();
-
-const PORT = 8081;
-
-interface ReadingDTO {
-  temperature: number;
-}
-
-const rng = {
-  Next(min: number, max: number): number {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-  }
+const frameworkMap = {
+  react: "./components/react/",
+  vue: "./components/vue/",
 };
 
-app.get("/temperature", (req, res) => {
-  const temperature = rng.Next(-20, 55);
-  const reading: ReadingDTO = {
-    temperature
-  };
+const createGetFrameworkPrefix = (frameworkMap: { [key: string]: string }) => (
+  frameworkName: string
+): string => frameworkMap[frameworkName];
 
-  res.json(reading);
-});
+const getFrameworkPrefix = createGetFrameworkPrefix(frameworkMap);
 
-app.get("/body", (req, res) => {
-  res.contentType("html").send(`
-    <span>Example of content</span>
-  `);
-});
+const createRequire = (prefix: string) => (
+  componentName: string
+): NodeRequire => {
+  return require(`${prefix}${componentName}`).hypernova;
+};
 
-app.listen(PORT, () => {
-  console.log(`Server is running on PORT ${PORT}`);
+const getComponentFromContext = (
+  componentName: string,
+  context: HypernovaContext<{ framework: string }>
+): NodeRequire => {
+  const { metadata } = context;
+  const prefix = getFrameworkPrefix(metadata.framework);
+  return createRequire(prefix)(componentName);
+};
+
+hypernova({
+  getComponent: getComponentFromContext,
+  createApplication: function() {
+    const app = express();
+
+    app.get("/health", function(_, res) {
+      return res.status(200).send("OK");
+    });
+
+    return app;
+  },
+  port: 3030
 });

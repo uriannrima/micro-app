@@ -15,12 +15,68 @@ else
 }
 
 @code {
+
+    public class HypernovaContent
+    {
+        public string Name { get; set; }
+
+        public string Html { get; set; }
+
+        public object Meta { get; set; }
+
+        public float Duration { get; set; }
+
+        public System.Net.HttpStatusCode StatusCode { get; set; }
+
+        public bool Success { get; set; }
+
+        public object Error { get; set; }
+    }
+
+    public class HypernovaResults
+    {
+        public HypernovaContent Content { get; set; }
+    }
+
+    public class HypernovaResponse
+    {
+        public bool Success { get; set; }
+        public object Error { get; set; }
+        public HypernovaResults Results { get; set; }
+    }
     private string Content { get; set; } = null;
 
     protected override async Task OnInitializedAsync()
     {
-        var client = ClientFactory.CreateClient();
-        var response = await client.GetAsync(new Uri("http://localhost:8081/body")).ConfigureAwait(false);
-        Content = await response.Content.ReadAsStringAsync();
+        using var client = ClientFactory.CreateClient();
+
+        var payload = new
+        {
+            content = new
+            {
+                name = "MyComponent",
+                data = new
+                {
+                    name = "Luciano Lima"
+                }
+            }
+        };
+
+        var requestBody = new StringContent(System.Text.Json.JsonSerializer.Serialize(payload), System.Text.Encoding.UTF8, System.Net.Mime.MediaTypeNames.Application.Json);
+        var response = await client.PostAsync(new Uri("http://localhost:3030/batch"), requestBody).ConfigureAwait(false);
+        using var responseStream = await response.Content.ReadAsStreamAsync();
+        var hypernovaResponse = await System.Text.Json.JsonSerializer.DeserializeAsync<HypernovaResponse>(responseStream, new System.Text.Json.JsonSerializerOptions
+        {
+            PropertyNameCaseInsensitive = true,
+        });
+
+        if (hypernovaResponse.Success)
+        {
+            Content = hypernovaResponse.Results.Content.Html;
+        }
+        else
+        {
+            Content = "Failed to fetch";
+        }
     }
 }
