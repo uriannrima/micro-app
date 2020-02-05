@@ -1,25 +1,19 @@
+import Vue from "vue";
 import hypernova, { serialize } from "hypernova";
-import Vue, { VueConstructor } from "vue";
 import { createRenderer } from "vue-server-renderer";
+import { VueConstructor } from "vue/types/umd";
 
-const renderer = createRenderer();
-
-export const renderVue = (name: string, Component: VueConstructor) =>
+export const renderVue = (name: string, Component: VueConstructor<Vue>): void =>
   hypernova({
     server() {
-      return (propsData: any): Promise<string> => {
+      return async (propsData: any): Promise<string> => {
         const Constructor = Vue.extend(Component);
-        if (Constructor instanceof Function) {
-          console.log("Is a function...");
-        }
-
-        console.log({ Constructor });
-
-        return renderer
-          .renderToString(new Constructor({ propsData }))
-          .then(contents => {
-            return serialize(name, contents, propsData);
-          });
+        const componentInstance = new Constructor({
+          propsData
+        });
+        const renderer = createRenderer();
+        const contents = await renderer.renderToString(componentInstance);
+        return serialize(name, contents, propsData);
       };
     },
     client() {

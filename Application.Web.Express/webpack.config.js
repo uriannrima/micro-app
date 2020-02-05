@@ -1,6 +1,6 @@
 const path = require("path");
 const nodeExternals = require("webpack-node-externals");
-const VueLoaderPlugin = require("vue-loader/dist/plugin");
+const VueLoaderPlugin = require("vue-loader/lib/plugin");
 
 module.exports = {
   entry: {
@@ -42,6 +42,10 @@ module.exports = {
       {
         test: /\.vue$/,
         loader: "vue-loader"
+      },
+      {
+        test: /\.css$/,
+        use: ["vue-style-loader", "css-loader"]
       }
     ]
   },

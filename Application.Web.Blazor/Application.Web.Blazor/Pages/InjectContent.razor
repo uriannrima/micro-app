@@ -5,13 +5,14 @@
 
 <p>This component demonstrates injectin content from other service.</p>
 
-@if (Content == null)
+@if (VueContent == null || ReactContent == null)
 {
     <p><em>Content loading...</em></p>
 }
 else
 {
-    @((MarkupString)Content)
+    @((MarkupString)VueContent)
+    @((MarkupString)ReactContent)
 }
 
 @code {
@@ -44,39 +45,108 @@ else
         public object Error { get; set; }
         public HypernovaResults Results { get; set; }
     }
-    private string Content { get; set; } = null;
+
+    private string ReactContent { get; set; } = null;
+    private string VueContent { get; set; } = null;
+
+    public class HypernovaClient
+    {
+        public class HypernovaRequest
+        {
+            public class HypernovaRequestContent
+            {
+                public string Name { get; set; }
+                public object Data { get; set; }
+                public object Metadata { get; set; }
+            }
+
+            public HypernovaRequestContent Content { get; set; }
+        }
+
+        IHttpClientFactory HttpClientFactory { get; set; }
+
+        Uri HypernovaUri { get; set; }
+
+        public HypernovaClient(IHttpClientFactory httpClientFactory, Uri hypernovaUri)
+        {
+            HttpClientFactory = httpClientFactory;
+            HypernovaUri = hypernovaUri;
+        }
+
+        public async Task<HypernovaResponse> BatchAsync(HypernovaRequest request)
+        {
+            var requestContent = System.Text.Json.JsonSerializer.Serialize(request, new System.Text.Json.JsonSerializerOptions()
+            {
+                PropertyNamingPolicy = System.Text.Json.JsonNamingPolicy.CamelCase
+            });
+            var requestBody = new StringContent(requestContent, System.Text.Encoding.UTF8, System.Net.Mime.MediaTypeNames.Application.Json);
+
+            using var client = HttpClientFactory.CreateClient();
+            var response = await client.PostAsync(this.HypernovaUri, requestBody).ConfigureAwait(false);
+
+            using var responseStream = await response.Content.ReadAsStreamAsync();
+            var hypernovaResponse = await System.Text.Json.JsonSerializer.DeserializeAsync<HypernovaResponse>(responseStream, new System.Text.Json.JsonSerializerOptions
+            {
+                PropertyNameCaseInsensitive = true,
+            });
+
+            return hypernovaResponse;
+        }
+    }
 
     protected override async Task OnInitializedAsync()
     {
-        using var client = ClientFactory.CreateClient();
+        var hypernovaClient = new HypernovaClient(ClientFactory, new Uri("http://localhost:3030/batch"));
 
-        var payload = new
+        var vueTask = Task.Run(async () =>
         {
-            content = new
+            var hypernovaResponse = await hypernovaClient.BatchAsync(new HypernovaClient.HypernovaRequest()
             {
-                name = "MyComponent",
-                data = new
+                Content = new HypernovaClient.HypernovaRequest.HypernovaRequestContent
                 {
-                    name = "Luciano Lima"
+                    Name = "MyComponent",
+                    Data = new
+                    {
+                        name = "Luciano Lima"
+                    },
+                    Metadata = new
+                    {
+                        framework = "vue"
+                    }
                 }
-            }
-        };
+            }).ConfigureAwait(false);
 
-        var requestBody = new StringContent(System.Text.Json.JsonSerializer.Serialize(payload), System.Text.Encoding.UTF8, System.Net.Mime.MediaTypeNames.Application.Json);
-        var response = await client.PostAsync(new Uri("http://localhost:3030/batch"), requestBody).ConfigureAwait(false);
-        using var responseStream = await response.Content.ReadAsStreamAsync();
-        var hypernovaResponse = await System.Text.Json.JsonSerializer.DeserializeAsync<HypernovaResponse>(responseStream, new System.Text.Json.JsonSerializerOptions
-        {
-            PropertyNameCaseInsensitive = true,
+            if (hypernovaResponse.Success)
+            {
+                this.VueContent = hypernovaResponse.Results.Content.Html;
+            }
         });
 
-        if (hypernovaResponse.Success)
+        var reactTask = Task.Run(async () =>
         {
-            Content = hypernovaResponse.Results.Content.Html;
-        }
-        else
-        {
-            Content = "Failed to fetch";
-        }
+            var hypernovaResponse = await hypernovaClient.BatchAsync(new HypernovaClient.HypernovaRequest()
+            {
+                Content = new HypernovaClient.HypernovaRequest.HypernovaRequestContent
+                {
+                    Name = "MyComponent",
+                    Data = new
+                    {
+                        name = "Luciano Lima"
+                    },
+                    Metadata = new
+                    {
+                        framework = "react"
+                    }
+                }
+            }).ConfigureAwait(false);
+
+            if (hypernovaResponse.Success)
+            {
+                this.ReactContent = hypernovaResponse.Results.Content.Html;
+            }
+
+        });
+
+        Task.WaitAll(vueTask, reactTask);
     }
 }
