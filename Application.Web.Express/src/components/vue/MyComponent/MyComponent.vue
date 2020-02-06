@@ -7,6 +7,7 @@
     }"
   >
     Hello, {{ name }} from Vue!
+    <button @click="handleClick">Click me</button>
   </div>
 </template>
 
@@ -14,6 +15,11 @@
 export default {
   props: {
     name: String
+  },
+  methods: {
+    handleClick() {
+      alert("Hello from Vue!");
+    }
   }
 };
 </script>

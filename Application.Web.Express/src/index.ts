@@ -1,9 +1,10 @@
 import express from "express";
 import hypernova, { HypernovaContext } from "hypernova/server";
+import path from "path";
 
 const frameworkMap = {
   react: "./components/react/",
-  vue: "./components/vue/",
+  vue: "./components/vue/"
 };
 
 const createGetFrameworkPrefix = (frameworkMap: { [key: string]: string }) => (
@@ -35,6 +36,8 @@ hypernova({
     app.get("/health", function(_, res) {
       return res.status(200).send("OK");
     });
+
+    app.use(express.static(path.join(process.cwd(), "dist")));
 
     return app;
   },

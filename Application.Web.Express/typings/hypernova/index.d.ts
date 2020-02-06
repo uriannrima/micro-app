@@ -1,6 +1,6 @@
 declare module "hypernova" {
   export function serialize(name: string, contents: string, data: any): string;
-  export function load(name: string): any;
+  export function load(name: string): any[];
   export default function hypernova(options: {
     server: () => (props: any) => string | Promise<string>;
     client: Function;
