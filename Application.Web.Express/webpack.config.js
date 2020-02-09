@@ -1,4 +1,5 @@
 const path = require("path");
+const glob = require("glob");
 const nodeExternals = require("webpack-node-externals");
 const VueLoaderPlugin = require("vue-loader/lib/plugin");
 
@@ -64,11 +65,21 @@ const server = {
   resolve
 };
 
+const componentFiles = glob.sync("./src/components/**/hypernova.ts");
+const hypernovaComponents = componentFiles.reduce((map, current) => {
+  const componentPath = current.split("/");
+  const componentName = componentPath[componentPath.length - 2];
+
+  return {
+    ...map,
+    [componentName]: current
+  };
+}, {});
+
+console.log({ componentFiles, hypernovaComponents });
+
 const client = {
-  entry: {
-    vue: "./src/components/vue/MyComponent/index.ts",
-    react: "./src/components/react/MyComponent/index.ts"
-  },
+  entry: hypernovaComponents,
   output,
   target: "web",
   node: {

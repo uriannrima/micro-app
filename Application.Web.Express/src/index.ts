@@ -16,7 +16,7 @@ const getFrameworkPrefix = createGetFrameworkPrefix(frameworkMap);
 const createRequire = (prefix: string) => (
   componentName: string
 ): NodeRequire => {
-  return require(`${prefix}${componentName}`).hypernova;
+  return require(`${prefix}${componentName}/hypernova`).default;
 };
 
 const getComponentFromContext = (

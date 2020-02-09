@@ -86,27 +86,51 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js?!./src/components/vue/MyComponent/MyComponent.vue?vue&type=script&lang=js&":
-/*!*******************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./src/components/vue/MyComponent/MyComponent.vue?vue&type=script&lang=js& ***!
-  \*******************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js?!./src/components/vue/AnotherVueModule/AnotherVueModule.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./src/components/vue/AnotherVueModule/AnotherVueModule.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  props: {\n    name: String\n  },\n  methods: {\n    handleClick: function handleClick() {\n      alert(\"Hello from Vue!\");\n    }\n  }\n});\n\n//# sourceURL=webpack:///./src/components/vue/MyComponent/MyComponent.vue?./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options");
+eval("__webpack_require__.r(__webpack_exports__);\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  props: {\n    name: String\n  },\n  methods: {\n    handleClick: function handleClick() {\n      alert(\"Hello from Vue!\");\n    }\n  }\n});\n\n//# sourceURL=webpack:///./src/components/vue/AnotherVueModule/AnotherVueModule.vue?./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options");
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./src/components/vue/MyComponent/MyComponent.vue?vue&type=template&id=828d20ac&":
-/*!*********************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./src/components/vue/MyComponent/MyComponent.vue?vue&type=template&id=828d20ac& ***!
-  \*********************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js?!./src/components/vue/VueModule/VueModule.vue?vue&type=script&lang=js&":
+/*!***************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./src/components/vue/VueModule/VueModule.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  props: {\n    name: String\n  },\n  methods: {\n    handleClick: function handleClick() {\n      alert(\"Hello from Vue!\");\n    }\n  }\n});\n\n//# sourceURL=webpack:///./src/components/vue/VueModule/VueModule.vue?./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options");
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./src/components/vue/AnotherVueModule/AnotherVueModule.vue?vue&type=template&id=9965fe34&":
+/*!*******************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./src/components/vue/AnotherVueModule/AnotherVueModule.vue?vue&type=template&id=9965fe34& ***!
+  \*******************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"render\", function() { return render; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"staticRenderFns\", function() { return staticRenderFns; });\nvar render = function() {\n  var _vm = this\n  var _h = _vm.$createElement\n  var _c = _vm._self._c || _h\n  return _c(\n    \"div\",\n    {\n      style: {\n        backgroundColor: \"green\",\n        color: \"white\",\n        padding: \"1em\"\n      }\n    },\n    [\n      _vm._ssrNode(\n        _vm._ssrEscape(\"\\n  Hello, \" + _vm._s(_vm.name) + \" from Vue!\\n  \") +\n          \"<button>Click me</button>\"\n      )\n    ]\n  )\n}\nvar staticRenderFns = []\nrender._withStripped = true\n\n\n\n//# sourceURL=webpack:///./src/components/vue/MyComponent/MyComponent.vue?./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"render\", function() { return render; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"staticRenderFns\", function() { return staticRenderFns; });\nvar render = function() {\n  var _vm = this\n  var _h = _vm.$createElement\n  var _c = _vm._self._c || _h\n  return _c(\n    \"div\",\n    {\n      style: {\n        backgroundColor: \"green\",\n        color: \"white\",\n        padding: \"1em\"\n      }\n    },\n    [\n      _vm._ssrNode(\n        _vm._ssrEscape(\n          \"\\n  Hello, \" + _vm._s(_vm.name) + \" from another Vue module!\\n  \"\n        ) + \"<button>Click me</button>\"\n      )\n    ]\n  )\n}\nvar staticRenderFns = []\nrender._withStripped = true\n\n\n\n//# sourceURL=webpack:///./src/components/vue/AnotherVueModule/AnotherVueModule.vue?./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options");
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./src/components/vue/VueModule/VueModule.vue?vue&type=template&id=76af572c&":
+/*!*****************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./src/components/vue/VueModule/VueModule.vue?vue&type=template&id=76af572c& ***!
+  \*****************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"render\", function() { return render; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"staticRenderFns\", function() { return staticRenderFns; });\nvar render = function() {\n  var _vm = this\n  var _h = _vm.$createElement\n  var _c = _vm._self._c || _h\n  return _c(\n    \"div\",\n    {\n      style: {\n        backgroundColor: \"green\",\n        color: \"white\",\n        padding: \"1em\"\n      }\n    },\n    [\n      _vm._ssrNode(\n        _vm._ssrEscape(\"\\n  Hello, \" + _vm._s(_vm.name) + \" from Vue!\\n  \") +\n          \"<button>Click me</button>\"\n      )\n    ]\n  )\n}\nvar staticRenderFns = []\nrender._withStripped = true\n\n\n\n//# sourceURL=webpack:///./src/components/vue/VueModule/VueModule.vue?./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options");
 
 /***/ }),
 
@@ -122,86 +146,146 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 
 /***/ }),
 
-/***/ "./src sync recursive ^.*$":
-/*!***********************!*\
-  !*** ./src sync ^.*$ ***!
-  \***********************/
+/***/ "./src sync recursive ^.*\\/hypernova$":
+/*!**********************************!*\
+  !*** ./src sync ^.*\/hypernova$ ***!
+  \**********************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("var map = {\n\t\".\": \"./src/index.ts\",\n\t\"./\": \"./src/index.ts\",\n\t\"./components/react/MyComponent\": \"./src/components/react/MyComponent/index.ts\",\n\t\"./components/react/MyComponent/\": \"./src/components/react/MyComponent/index.ts\",\n\t\"./components/react/MyComponent/MyComponent\": \"./src/components/react/MyComponent/MyComponent.tsx\",\n\t\"./components/react/MyComponent/MyComponent.tsx\": \"./src/components/react/MyComponent/MyComponent.tsx\",\n\t\"./components/react/MyComponent/index\": \"./src/components/react/MyComponent/index.ts\",\n\t\"./components/react/MyComponent/index.ts\": \"./src/components/react/MyComponent/index.ts\",\n\t\"./components/vue/MyComponent\": \"./src/components/vue/MyComponent/index.ts\",\n\t\"./components/vue/MyComponent/\": \"./src/components/vue/MyComponent/index.ts\",\n\t\"./components/vue/MyComponent/MyComponent.vue\": \"./src/components/vue/MyComponent/MyComponent.vue\",\n\t\"./components/vue/MyComponent/index\": \"./src/components/vue/MyComponent/index.ts\",\n\t\"./components/vue/MyComponent/index.ts\": \"./src/components/vue/MyComponent/index.ts\",\n\t\"./helpers/vue/hypernova-bindings\": \"./src/helpers/vue/hypernova-bindings.ts\",\n\t\"./helpers/vue/hypernova-bindings.ts\": \"./src/helpers/vue/hypernova-bindings.ts\",\n\t\"./index\": \"./src/index.ts\",\n\t\"./index.ts\": \"./src/index.ts\"\n};\n\n\nfunction webpackContext(req) {\n\tvar id = webpackContextResolve(req);\n\treturn __webpack_require__(id);\n}\nfunction webpackContextResolve(req) {\n\tif(!__webpack_require__.o(map, req)) {\n\t\tvar e = new Error(\"Cannot find module '\" + req + \"'\");\n\t\te.code = 'MODULE_NOT_FOUND';\n\t\tthrow e;\n\t}\n\treturn map[req];\n}\nwebpackContext.keys = function webpackContextKeys() {\n\treturn Object.keys(map);\n};\nwebpackContext.resolve = webpackContextResolve;\nmodule.exports = webpackContext;\nwebpackContext.id = \"./src sync recursive ^.*$\";\n\n//# sourceURL=webpack:///./src_sync_^.*$?");
+eval("var map = {\n\t\"./components/react/ReactModule/hypernova\": \"./src/components/react/ReactModule/hypernova.ts\",\n\t\"./components/vue/AnotherVueModule/hypernova\": \"./src/components/vue/AnotherVueModule/hypernova.ts\",\n\t\"./components/vue/VueModule/hypernova\": \"./src/components/vue/VueModule/hypernova.ts\"\n};\n\n\nfunction webpackContext(req) {\n\tvar id = webpackContextResolve(req);\n\treturn __webpack_require__(id);\n}\nfunction webpackContextResolve(req) {\n\tif(!__webpack_require__.o(map, req)) {\n\t\tvar e = new Error(\"Cannot find module '\" + req + \"'\");\n\t\te.code = 'MODULE_NOT_FOUND';\n\t\tthrow e;\n\t}\n\treturn map[req];\n}\nwebpackContext.keys = function webpackContextKeys() {\n\treturn Object.keys(map);\n};\nwebpackContext.resolve = webpackContextResolve;\nmodule.exports = webpackContext;\nwebpackContext.id = \"./src sync recursive ^.*\\\\/hypernova$\";\n\n//# sourceURL=webpack:///./src_sync_^.*\\/hypernova$?");
 
 /***/ }),
 
-/***/ "./src/components/react/MyComponent/MyComponent.tsx":
+/***/ "./src/components/react/ReactModule/ReactModule.tsx":
 /*!**********************************************************!*\
-  !*** ./src/components/react/MyComponent/MyComponent.tsx ***!
+  !*** ./src/components/react/ReactModule/ReactModule.tsx ***!
   \**********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\r\nvar __importDefault = (this && this.__importDefault) || function (mod) {\r\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\r\n};\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nvar react_1 = __importDefault(__webpack_require__(/*! react */ \"react\"));\r\nfunction MyComponent(props) {\r\n    var style = {\r\n        backgroundColor: \"blue\",\r\n        color: \"white\",\r\n        padding: \"1em\"\r\n    };\r\n    var handleClick = function () {\r\n        alert(\"Hello from React!\");\r\n    };\r\n    return (react_1.default.createElement(\"div\", { style: style },\r\n        \"Hello, \",\r\n        props.name,\r\n        \" from React!\",\r\n        react_1.default.createElement(\"button\", { onClick: handleClick }, \"Click me\")));\r\n}\r\nexports.default = MyComponent;\r\n\n\n//# sourceURL=webpack:///./src/components/react/MyComponent/MyComponent.tsx?");
+eval("\r\nvar __importDefault = (this && this.__importDefault) || function (mod) {\r\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\r\n};\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nvar react_1 = __importDefault(__webpack_require__(/*! react */ \"react\"));\r\nfunction MyComponent(props) {\r\n    var style = {\r\n        backgroundColor: \"blue\",\r\n        color: \"white\",\r\n        padding: \"1em\"\r\n    };\r\n    var handleClick = function () {\r\n        alert(\"Hello from React!\");\r\n    };\r\n    return (react_1.default.createElement(\"div\", { style: style },\r\n        \"Hello, \",\r\n        props.name,\r\n        \" from React!\",\r\n        react_1.default.createElement(\"button\", { onClick: handleClick }, \"Click me\")));\r\n}\r\nexports.default = MyComponent;\r\n\n\n//# sourceURL=webpack:///./src/components/react/ReactModule/ReactModule.tsx?");
 
 /***/ }),
 
-/***/ "./src/components/react/MyComponent/index.ts":
+/***/ "./src/components/react/ReactModule/hypernova.ts":
+/*!*******************************************************!*\
+  !*** ./src/components/react/ReactModule/hypernova.ts ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\r\nvar __importDefault = (this && this.__importDefault) || function (mod) {\r\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\r\n};\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nvar hypernova_react_1 = __webpack_require__(/*! hypernova-react */ \"hypernova-react\");\r\nvar ReactModule_1 = __importDefault(__webpack_require__(/*! ./ReactModule */ \"./src/components/react/ReactModule/ReactModule.tsx\"));\r\nexports.default = hypernova_react_1.renderReact(\"ReactModule\", ReactModule_1.default);\r\n\n\n//# sourceURL=webpack:///./src/components/react/ReactModule/hypernova.ts?");
+
+/***/ }),
+
+/***/ "./src/components/vue/AnotherVueModule/AnotherVueModule.vue":
+/*!******************************************************************!*\
+  !*** ./src/components/vue/AnotherVueModule/AnotherVueModule.vue ***!
+  \******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _AnotherVueModule_vue_vue_type_template_id_9965fe34___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./AnotherVueModule.vue?vue&type=template&id=9965fe34& */ \"./src/components/vue/AnotherVueModule/AnotherVueModule.vue?vue&type=template&id=9965fe34&\");\n/* harmony import */ var _AnotherVueModule_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./AnotherVueModule.vue?vue&type=script&lang=js& */ \"./src/components/vue/AnotherVueModule/AnotherVueModule.vue?vue&type=script&lang=js&\");\n/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ \"./node_modules/vue-loader/lib/runtime/componentNormalizer.js\");\n\n\n\nfunction injectStyles (context) {\n  \n  \n}\n\n/* normalize component */\n\nvar component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(\n  _AnotherVueModule_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[\"default\"],\n  _AnotherVueModule_vue_vue_type_template_id_9965fe34___WEBPACK_IMPORTED_MODULE_0__[\"render\"],\n  _AnotherVueModule_vue_vue_type_template_id_9965fe34___WEBPACK_IMPORTED_MODULE_0__[\"staticRenderFns\"],\n  false,\n  injectStyles,\n  null,\n  \"3a4fbe04\"\n  \n)\n\ncomponent.options.__file = \"src/components/vue/AnotherVueModule/AnotherVueModule.vue\"\n/* harmony default export */ __webpack_exports__[\"default\"] = (component.exports);\n\n//# sourceURL=webpack:///./src/components/vue/AnotherVueModule/AnotherVueModule.vue?");
+
+/***/ }),
+
+/***/ "./src/components/vue/AnotherVueModule/AnotherVueModule.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************************!*\
+  !*** ./src/components/vue/AnotherVueModule/AnotherVueModule.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _node_modules_babel_loader_lib_index_js_node_modules_vue_loader_lib_index_js_vue_loader_options_AnotherVueModule_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib!../../../../node_modules/vue-loader/lib??vue-loader-options!./AnotherVueModule.vue?vue&type=script&lang=js& */ \"./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js?!./src/components/vue/AnotherVueModule/AnotherVueModule.vue?vue&type=script&lang=js&\");\n/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__[\"default\"] = (_node_modules_babel_loader_lib_index_js_node_modules_vue_loader_lib_index_js_vue_loader_options_AnotherVueModule_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__[\"default\"]); \n\n//# sourceURL=webpack:///./src/components/vue/AnotherVueModule/AnotherVueModule.vue?");
+
+/***/ }),
+
+/***/ "./src/components/vue/AnotherVueModule/AnotherVueModule.vue?vue&type=template&id=9965fe34&":
+/*!*************************************************************************************************!*\
+  !*** ./src/components/vue/AnotherVueModule/AnotherVueModule.vue?vue&type=template&id=9965fe34& ***!
+  \*************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AnotherVueModule_vue_vue_type_template_id_9965fe34___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./AnotherVueModule.vue?vue&type=template&id=9965fe34& */ \"./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./src/components/vue/AnotherVueModule/AnotherVueModule.vue?vue&type=template&id=9965fe34&\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"render\", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AnotherVueModule_vue_vue_type_template_id_9965fe34___WEBPACK_IMPORTED_MODULE_0__[\"render\"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"staticRenderFns\", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AnotherVueModule_vue_vue_type_template_id_9965fe34___WEBPACK_IMPORTED_MODULE_0__[\"staticRenderFns\"]; });\n\n\n\n//# sourceURL=webpack:///./src/components/vue/AnotherVueModule/AnotherVueModule.vue?");
+
+/***/ }),
+
+/***/ "./src/components/vue/AnotherVueModule/hypernova.ts":
+/*!**********************************************************!*\
+  !*** ./src/components/vue/AnotherVueModule/hypernova.ts ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\r\nvar __importDefault = (this && this.__importDefault) || function (mod) {\r\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\r\n};\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nvar hypernova_bindings_1 = __webpack_require__(/*! ../../../helpers/vue/hypernova-bindings */ \"./src/helpers/vue/hypernova-bindings.ts\");\r\nvar _1 = __importDefault(__webpack_require__(/*! ./ */ \"./src/components/vue/AnotherVueModule/index.ts\"));\r\nexports.default = hypernova_bindings_1.renderVue(\"AnotherVueModule\", _1.default);\r\n\n\n//# sourceURL=webpack:///./src/components/vue/AnotherVueModule/hypernova.ts?");
+
+/***/ }),
+
+/***/ "./src/components/vue/AnotherVueModule/index.ts":
+/*!******************************************************!*\
+  !*** ./src/components/vue/AnotherVueModule/index.ts ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\r\nvar __importDefault = (this && this.__importDefault) || function (mod) {\r\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\r\n};\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nvar AnotherVueModule_vue_1 = __importDefault(__webpack_require__(/*! ./AnotherVueModule.vue */ \"./src/components/vue/AnotherVueModule/AnotherVueModule.vue\"));\r\nexports.default = AnotherVueModule_vue_1.default;\r\n\n\n//# sourceURL=webpack:///./src/components/vue/AnotherVueModule/index.ts?");
+
+/***/ }),
+
+/***/ "./src/components/vue/VueModule/VueModule.vue":
+/*!****************************************************!*\
+  !*** ./src/components/vue/VueModule/VueModule.vue ***!
+  \****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _VueModule_vue_vue_type_template_id_76af572c___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./VueModule.vue?vue&type=template&id=76af572c& */ \"./src/components/vue/VueModule/VueModule.vue?vue&type=template&id=76af572c&\");\n/* harmony import */ var _VueModule_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./VueModule.vue?vue&type=script&lang=js& */ \"./src/components/vue/VueModule/VueModule.vue?vue&type=script&lang=js&\");\n/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ \"./node_modules/vue-loader/lib/runtime/componentNormalizer.js\");\n\n\n\nfunction injectStyles (context) {\n  \n  \n}\n\n/* normalize component */\n\nvar component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(\n  _VueModule_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[\"default\"],\n  _VueModule_vue_vue_type_template_id_76af572c___WEBPACK_IMPORTED_MODULE_0__[\"render\"],\n  _VueModule_vue_vue_type_template_id_76af572c___WEBPACK_IMPORTED_MODULE_0__[\"staticRenderFns\"],\n  false,\n  injectStyles,\n  null,\n  \"4f964750\"\n  \n)\n\ncomponent.options.__file = \"src/components/vue/VueModule/VueModule.vue\"\n/* harmony default export */ __webpack_exports__[\"default\"] = (component.exports);\n\n//# sourceURL=webpack:///./src/components/vue/VueModule/VueModule.vue?");
+
+/***/ }),
+
+/***/ "./src/components/vue/VueModule/VueModule.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************!*\
+  !*** ./src/components/vue/VueModule/VueModule.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _node_modules_babel_loader_lib_index_js_node_modules_vue_loader_lib_index_js_vue_loader_options_VueModule_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib!../../../../node_modules/vue-loader/lib??vue-loader-options!./VueModule.vue?vue&type=script&lang=js& */ \"./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js?!./src/components/vue/VueModule/VueModule.vue?vue&type=script&lang=js&\");\n/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__[\"default\"] = (_node_modules_babel_loader_lib_index_js_node_modules_vue_loader_lib_index_js_vue_loader_options_VueModule_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__[\"default\"]); \n\n//# sourceURL=webpack:///./src/components/vue/VueModule/VueModule.vue?");
+
+/***/ }),
+
+/***/ "./src/components/vue/VueModule/VueModule.vue?vue&type=template&id=76af572c&":
+/*!***********************************************************************************!*\
+  !*** ./src/components/vue/VueModule/VueModule.vue?vue&type=template&id=76af572c& ***!
+  \***********************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_VueModule_vue_vue_type_template_id_76af572c___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./VueModule.vue?vue&type=template&id=76af572c& */ \"./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./src/components/vue/VueModule/VueModule.vue?vue&type=template&id=76af572c&\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"render\", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_VueModule_vue_vue_type_template_id_76af572c___WEBPACK_IMPORTED_MODULE_0__[\"render\"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"staticRenderFns\", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_VueModule_vue_vue_type_template_id_76af572c___WEBPACK_IMPORTED_MODULE_0__[\"staticRenderFns\"]; });\n\n\n\n//# sourceURL=webpack:///./src/components/vue/VueModule/VueModule.vue?");
+
+/***/ }),
+
+/***/ "./src/components/vue/VueModule/hypernova.ts":
 /*!***************************************************!*\
-  !*** ./src/components/react/MyComponent/index.ts ***!
+  !*** ./src/components/vue/VueModule/hypernova.ts ***!
   \***************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\r\nvar __importDefault = (this && this.__importDefault) || function (mod) {\r\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\r\n};\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nvar hypernova_react_1 = __webpack_require__(/*! hypernova-react */ \"hypernova-react\");\r\nvar MyComponent_1 = __importDefault(__webpack_require__(/*! ./MyComponent */ \"./src/components/react/MyComponent/MyComponent.tsx\"));\r\nexports.hypernova = hypernova_react_1.renderReact(\"MyComponent\", MyComponent_1.default);\r\nexports.default = MyComponent_1.default;\r\n\n\n//# sourceURL=webpack:///./src/components/react/MyComponent/index.ts?");
-
-/***/ }),
-
-/***/ "./src/components/vue/MyComponent/MyComponent.vue":
-/*!********************************************************!*\
-  !*** ./src/components/vue/MyComponent/MyComponent.vue ***!
-  \********************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _MyComponent_vue_vue_type_template_id_828d20ac___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./MyComponent.vue?vue&type=template&id=828d20ac& */ \"./src/components/vue/MyComponent/MyComponent.vue?vue&type=template&id=828d20ac&\");\n/* harmony import */ var _MyComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./MyComponent.vue?vue&type=script&lang=js& */ \"./src/components/vue/MyComponent/MyComponent.vue?vue&type=script&lang=js&\");\n/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ \"./node_modules/vue-loader/lib/runtime/componentNormalizer.js\");\n\n\n\nfunction injectStyles (context) {\n  \n  \n}\n\n/* normalize component */\n\nvar component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(\n  _MyComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[\"default\"],\n  _MyComponent_vue_vue_type_template_id_828d20ac___WEBPACK_IMPORTED_MODULE_0__[\"render\"],\n  _MyComponent_vue_vue_type_template_id_828d20ac___WEBPACK_IMPORTED_MODULE_0__[\"staticRenderFns\"],\n  false,\n  injectStyles,\n  null,\n  \"05a2ee8e\"\n  \n)\n\ncomponent.options.__file = \"src/components/vue/MyComponent/MyComponent.vue\"\n/* harmony default export */ __webpack_exports__[\"default\"] = (component.exports);\n\n//# sourceURL=webpack:///./src/components/vue/MyComponent/MyComponent.vue?");
-
-/***/ }),
-
-/***/ "./src/components/vue/MyComponent/MyComponent.vue?vue&type=script&lang=js&":
-/*!*********************************************************************************!*\
-  !*** ./src/components/vue/MyComponent/MyComponent.vue?vue&type=script&lang=js& ***!
-  \*********************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _node_modules_babel_loader_lib_index_js_node_modules_vue_loader_lib_index_js_vue_loader_options_MyComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib!../../../../node_modules/vue-loader/lib??vue-loader-options!./MyComponent.vue?vue&type=script&lang=js& */ \"./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js?!./src/components/vue/MyComponent/MyComponent.vue?vue&type=script&lang=js&\");\n/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__[\"default\"] = (_node_modules_babel_loader_lib_index_js_node_modules_vue_loader_lib_index_js_vue_loader_options_MyComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__[\"default\"]); \n\n//# sourceURL=webpack:///./src/components/vue/MyComponent/MyComponent.vue?");
-
-/***/ }),
-
-/***/ "./src/components/vue/MyComponent/MyComponent.vue?vue&type=template&id=828d20ac&":
-/*!***************************************************************************************!*\
-  !*** ./src/components/vue/MyComponent/MyComponent.vue?vue&type=template&id=828d20ac& ***!
-  \***************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_MyComponent_vue_vue_type_template_id_828d20ac___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./MyComponent.vue?vue&type=template&id=828d20ac& */ \"./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./src/components/vue/MyComponent/MyComponent.vue?vue&type=template&id=828d20ac&\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"render\", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_MyComponent_vue_vue_type_template_id_828d20ac___WEBPACK_IMPORTED_MODULE_0__[\"render\"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"staticRenderFns\", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_MyComponent_vue_vue_type_template_id_828d20ac___WEBPACK_IMPORTED_MODULE_0__[\"staticRenderFns\"]; });\n\n\n\n//# sourceURL=webpack:///./src/components/vue/MyComponent/MyComponent.vue?");
-
-/***/ }),
-
-/***/ "./src/components/vue/MyComponent/index.ts":
-/*!*************************************************!*\
-  !*** ./src/components/vue/MyComponent/index.ts ***!
-  \*************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-eval("\r\nvar __importDefault = (this && this.__importDefault) || function (mod) {\r\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\r\n};\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nvar hypernova_bindings_1 = __webpack_require__(/*! ../../../helpers/vue/hypernova-bindings */ \"./src/helpers/vue/hypernova-bindings.ts\");\r\nvar MyComponent_vue_1 = __importDefault(__webpack_require__(/*! ./MyComponent.vue */ \"./src/components/vue/MyComponent/MyComponent.vue\"));\r\nexports.hypernova = hypernova_bindings_1.renderVue(\"MyComponent\", MyComponent_vue_1.default);\r\nexports.default = MyComponent_vue_1.default;\r\n\n\n//# sourceURL=webpack:///./src/components/vue/MyComponent/index.ts?");
+eval("\r\nvar __importDefault = (this && this.__importDefault) || function (mod) {\r\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\r\n};\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nvar hypernova_bindings_1 = __webpack_require__(/*! ../../../helpers/vue/hypernova-bindings */ \"./src/helpers/vue/hypernova-bindings.ts\");\r\nvar VueModule_vue_1 = __importDefault(__webpack_require__(/*! ./VueModule.vue */ \"./src/components/vue/VueModule/VueModule.vue\"));\r\nexports.default = hypernova_bindings_1.renderVue(\"VueModule\", VueModule_vue_1.default);\r\n\n\n//# sourceURL=webpack:///./src/components/vue/VueModule/hypernova.ts?");
 
 /***/ }),
 
@@ -225,7 +309,7 @@ eval("\r\nvar __awaiter = (this && this.__awaiter) || function (thisArg, _argume
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\r\nvar __importDefault = (this && this.__importDefault) || function (mod) {\r\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\r\n};\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nvar express_1 = __importDefault(__webpack_require__(/*! express */ \"express\"));\r\nvar server_1 = __importDefault(__webpack_require__(/*! hypernova/server */ \"hypernova/server\"));\r\nvar path_1 = __importDefault(__webpack_require__(/*! path */ \"path\"));\r\nvar frameworkMap = {\r\n    react: \"./components/react/\",\r\n    vue: \"./components/vue/\"\r\n};\r\nvar createGetFrameworkPrefix = function (frameworkMap) { return function (frameworkName) { return frameworkMap[frameworkName]; }; };\r\nvar getFrameworkPrefix = createGetFrameworkPrefix(frameworkMap);\r\nvar createRequire = function (prefix) { return function (componentName) {\r\n    return __webpack_require__(\"./src sync recursive ^.*$\")(\"\" + prefix + componentName).hypernova;\r\n}; };\r\nvar getComponentFromContext = function (componentName, context) {\r\n    var metadata = context.metadata;\r\n    var prefix = getFrameworkPrefix(metadata.framework);\r\n    return createRequire(prefix)(componentName);\r\n};\r\nserver_1.default({\r\n    getComponent: getComponentFromContext,\r\n    createApplication: function () {\r\n        var app = express_1.default();\r\n        app.get(\"/health\", function (_, res) {\r\n            return res.status(200).send(\"OK\");\r\n        });\r\n        app.use(express_1.default.static(path_1.default.join(process.cwd(), \"dist\")));\r\n        return app;\r\n    },\r\n    port: 3030\r\n});\r\n\n\n//# sourceURL=webpack:///./src/index.ts?");
+eval("\r\nvar __importDefault = (this && this.__importDefault) || function (mod) {\r\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\r\n};\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nvar express_1 = __importDefault(__webpack_require__(/*! express */ \"express\"));\r\nvar server_1 = __importDefault(__webpack_require__(/*! hypernova/server */ \"hypernova/server\"));\r\nvar path_1 = __importDefault(__webpack_require__(/*! path */ \"path\"));\r\nvar frameworkMap = {\r\n    react: \"./components/react/\",\r\n    vue: \"./components/vue/\"\r\n};\r\nvar createGetFrameworkPrefix = function (frameworkMap) { return function (frameworkName) { return frameworkMap[frameworkName]; }; };\r\nvar getFrameworkPrefix = createGetFrameworkPrefix(frameworkMap);\r\nvar createRequire = function (prefix) { return function (componentName) {\r\n    return __webpack_require__(\"./src sync recursive ^.*\\\\/hypernova$\")(\"\" + prefix + componentName + \"/hypernova\").default;\r\n}; };\r\nvar getComponentFromContext = function (componentName, context) {\r\n    var metadata = context.metadata;\r\n    var prefix = getFrameworkPrefix(metadata.framework);\r\n    return createRequire(prefix)(componentName);\r\n};\r\nserver_1.default({\r\n    getComponent: getComponentFromContext,\r\n    createApplication: function () {\r\n        var app = express_1.default();\r\n        app.get(\"/health\", function (_, res) {\r\n            return res.status(200).send(\"OK\");\r\n        });\r\n        app.use(express_1.default.static(path_1.default.join(process.cwd(), \"dist\")));\r\n        return app;\r\n    },\r\n    port: 3030\r\n});\r\n\n\n//# sourceURL=webpack:///./src/index.ts?");
 
 /***/ }),
 

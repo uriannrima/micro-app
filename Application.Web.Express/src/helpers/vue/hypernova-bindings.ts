@@ -1,7 +1,7 @@
 import Vue from "vue";
 import hypernova, { serialize, load } from "hypernova";
 import { createRenderer } from "vue-server-renderer";
-import { VueConstructor } from "vue/types/umd";
+import { VueConstructor } from "vue";
 
 const createInstance = ({
   Component,
