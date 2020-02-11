@@ -31,7 +31,6 @@ export const renderVue = (name: string, Component: VueConstructor<Vue>): void =>
       if (payloads) {
         payloads.forEach(payload => {
           const { node, data: propsData } = payload;
-          console.log({ node, propsData });
           const componentInstance = createInstance({ Component, propsData });
           componentInstance.$mount(node);
         });

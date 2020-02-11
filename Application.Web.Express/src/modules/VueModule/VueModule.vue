@@ -1,11 +1,5 @@
 <template>
-  <div
-    :style="{
-      backgroundColor: 'green',
-      color: 'white',
-      padding: '1em'
-    }"
-  >
+  <div>
     Hello, {{ name }} from Vue!
     <button @click="handleClick">Click me</button>
   </div>
@@ -24,4 +18,10 @@ export default {
 };
 </script>
 
-<style></style>
+<style scoped>
+div {
+  background-color: limegreen;
+  color: white;
+  padding: 1em;
+}
+</style>

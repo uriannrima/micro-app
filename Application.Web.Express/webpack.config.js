@@ -33,7 +33,8 @@ const _module = {
     },
     {
       test: /\.css$/,
-      use: ["vue-style-loader", "css-loader"]
+      use: ["vue-style-loader", "css-loader"],
+      exclude: /\.module\.css$/
     }
   ]
 };
@@ -60,12 +61,25 @@ const server = {
   target: "node",
   node,
   externals,
-  module: _module,
+  module: {
+    ..._module,
+    rules: _module.rules.concat({
+      test: /\.css$/,
+      loader: "css-loader",
+      options: {
+        modules: {
+          localIdentName: "[name]__[local]___[hash:base64:5]"
+        },
+        onlyLocals: true
+      },
+      include: /\.module\.css$/
+    })
+  },
   plugins,
   resolve
 };
 
-const componentFiles = glob.sync("./src/components/**/hypernova.ts");
+const componentFiles = glob.sync("./src/modules/**/hypernova.ts");
 const hypernovaComponents = componentFiles.reduce((map, current) => {
   const componentPath = current.split("/");
   const componentName = componentPath[componentPath.length - 2];
@@ -76,8 +90,6 @@ const hypernovaComponents = componentFiles.reduce((map, current) => {
   };
 }, {});
 
-console.log({ componentFiles, hypernovaComponents });
-
 const client = {
   entry: hypernovaComponents,
   output,
@@ -86,7 +98,24 @@ const client = {
     fs: "empty",
     module: "empty"
   },
-  module: _module,
+  module: {
+    ..._module,
+    rules: _module.rules.concat({
+      test: /\.css$/,
+      loader: [
+        "style-loader",
+        {
+          loader: "css-loader",
+          options: {
+            modules: {
+              localIdentName: "[name]__[local]___[hash:base64:5]"
+            }
+          }
+        }
+      ],
+      include: /\.module\.css$/
+    })
+  },
   plugins,
   resolve
 };

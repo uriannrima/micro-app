@@ -30,3 +30,6 @@ benchmarks/graphs
 bin
 obj
 v16
+
+# Build
+dist/

@@ -1,22 +1,19 @@
 import React from "react";
 
-function MyComponent(props: { name: string }): React.ReactElement {
-  const style = {
-    backgroundColor: "blue",
-    color: "white",
-    padding: "1em"
-  };
+// import "./ReactModule.css";
+import styles from "./ReactModule.module.css";
 
+function ReactModule(props: { name: string }): React.ReactElement {
   const handleClick = (): void => {
     alert("Hello from React!");
   };
 
   return (
-    <div style={style}>
+    <div className={styles.ReactModule}>
       Hello, {props.name} from React!
       <button onClick={handleClick}>Click me</button>
     </div>
   );
 }
 
-export default MyComponent;
+export default ReactModule;
