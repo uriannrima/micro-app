@@ -19,7 +19,7 @@ const createInstance = ({
 export const renderVue = (name: string, Component: VueConstructor<Vue>): void =>
   hypernova({
     server() {
-      return async (propsData: any): Promise<string> => {
+      return async (propsData: any = {}): Promise<string> => {
         const componentInstance = createInstance({ Component, propsData });
         const renderer = createRenderer();
         const contents = await renderer.renderToString(componentInstance);
