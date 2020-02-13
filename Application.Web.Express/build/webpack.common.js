@@ -1,5 +1,4 @@
 const path = require("path");
-const nodeExternals = require("webpack-node-externals");
 const VueLoaderPlugin = require("vue-loader/lib/plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
@@ -46,13 +45,6 @@ module.exports = {
   // Extensions to add automatically to the end of a import
   resolve: {
     extensions: [".ts", ".tsx", ".js", ".jsx"]
-  },
-  // Required to Server Side Rendering in Node
-  externals: [nodeExternals()],
-  node: {
-    // Need this when working with express, otherwise the build fails
-    __dirname: false, // if you don't put this is, __dirname
-    __filename: false // and __filename return blank or /
   },
   watch: true,
 };

@@ -6,13 +6,14 @@ const { getHypernovaComponents } = require("./utils");
 
 module.exports = merge(common, {
   name: "client",
+  devtool: "source-map",
+  entry: getHypernovaComponents(),
   output: {
     path: path.join(__dirname, "..", "dist/client"),
     publicPath: "/client",
     filename: "[name].js"
   },
-  entry: getHypernovaComponents(),
-  target: "web",
+  target: "web",  
   node: {
     fs: "empty",
     module: "empty"
