@@ -9,12 +9,21 @@
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
 
-<hypernova component="VueModule" data="@(new { name = "Luciano Lima" })"></hypernova>
-<hypernova component="ReactModule" data="@(new { name = "Luciano Lima" })"></hypernova>
-<hypernova component="AnotherVueModule" data="@(new { name = "Luciano Lima" })"></hypernova>
-<hypernova component="VuexModule"></hypernova>
+<style>
+</style>
+
+<div class="card-deck">
+    <div class="card">
+        <hypernova component="VueModule" data="@(new { name = "Luciano Lima" })"></hypernova>
+    </div>
+    <div class="card">
+        <hypernova component="ReactModule" data="@(new { name = "Luciano Lima" })"></hypernova>
+    </div>
+    <div class="card">
+        <hypernova component="VuexModule"></hypernova>
+    </div>
+</div>
 
 <hypernova-script component="VueModule"></hypernova-script>
-<hypernova-script component="AnotherVueModule"></hypernova-script>
 <hypernova-script component="ReactModule"></hypernova-script>
 <hypernova-script component="VuexModule"></hypernova-script>

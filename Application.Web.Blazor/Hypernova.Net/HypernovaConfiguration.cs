@@ -8,6 +8,6 @@ namespace Hypernova.Net
     {
         public string Uri { get; set; }
         public string BatchEndpoint { get; set; }
-        public string ClintScriptEndpoint { get; set; }
+        public string ClientScriptUri { get; set; }
     }
 }

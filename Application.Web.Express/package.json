@@ -50,9 +50,11 @@
     "build:client:dev": "webpack --config build/webpack.client.js",
     "build:server": "webpack --config build/webpack.server.prod.js",
     "build:client": "webpack --config build/webpack.client.prod.js",
-    "start:server": "node ./dist/server/index.js",
-    "start:watch": "concurrently \"yarn build:both:dev\" \"nodemon\" --names build:both,start:server",
-    "start": "yarn build:both && yarn start:server"
+    "start:server:both": "concurrently \"yarn start:server:hypernova\" \"yarn start:server:static\" ",
+    "start:server:hypernova": "node ./dist/server/hypernovaServer.js",
+    "start:server:static": "node ./dist/server/staticServer.js",
+    "start:watch": "concurrently \"yarn build:both:dev\" \"nodemon\" --names build:both,start:server:both",
+    "start": "yarn build:both && yarn start:server:both"
   },
   "nodemonConfig": {
     "ignore": [
@@ -64,7 +66,7 @@
     "watch": [
       "dist/server/*"
     ],
-    "exec": "yarn start:server",
+    "exec": "yarn start:server:both",
     "ext": "js"
   }
 }

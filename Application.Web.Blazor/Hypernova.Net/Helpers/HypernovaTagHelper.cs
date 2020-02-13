@@ -52,10 +52,17 @@ namespace Hypernova.Net.TagHelpers
                 }
             };
 
-            var renderResponse = await HypernovaClient.BatchAsync(renderRequest).ConfigureAwait(false);
-            if (renderResponse.Success)
+            try
             {
-                output.Content.SetHtmlContent(renderResponse.Results.Content.Html);
+                var renderResponse = await HypernovaClient.BatchAsync(renderRequest).ConfigureAwait(false);
+                if (renderResponse.Success)
+                {
+                    output.Content.SetHtmlContent(renderResponse.Results.Content.Html);
+                }
+            }
+            catch (Exception)
+            {
+                // Log somehow
             }
 
             await base.ProcessAsync(context, output).ConfigureAwait(false);
@@ -82,7 +89,7 @@ namespace Hypernova.Net.TagHelpers
 
             output.TagName = null;
             output.TagMode = TagMode.StartTagAndEndTag;
-            output.Content.SetHtmlContent($"<script src='{this.Configuration.Uri}/{this.Configuration.ClintScriptEndpoint}/{Component}.js'></script>");
+            output.Content.SetHtmlContent($"<script src='{this.Configuration.ClientScriptUri}/{Component}.js'></script>");
 
             return base.ProcessAsync(context, output);
         }

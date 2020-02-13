@@ -1,7 +1,12 @@
 <template>
-  <div>
-    Hello, {{ name }} from Vue!
-    <button @click="handleClick">Click me</button>
+  <div class="App">
+    <h4 class="Title">Hello, {{ name }}!</h4>
+    <div class="Body">
+      <span>This is a simple Vue App rendered by Hypernova.</span>
+    </div>
+    <div class="Buttons">
+      <button @click="handleClick">Alert Me</button>
+    </div>
   </div>
 </template>
 
@@ -19,9 +24,27 @@ export default {
 </script>
 
 <style scoped>
-div {
-  background-color: limegreen;
+.App {
+  background-color: #41b883;
   color: white;
   padding: 1em;
+}
+
+.Title {
+  text-align: center;
+}
+
+.Body,
+.Buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.Body {
+  margin-bottom: 1em;
+}
+
+.Body > span {
+  text-align: center;
 }
 </style>

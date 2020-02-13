@@ -9,9 +9,14 @@ function ReactModule(props: { name: string }): React.ReactElement {
   };
 
   return (
-    <div className={styles.ReactModule}>
-      Hello, {props.name} from React!
-      <button onClick={handleClick}>Click me</button>
+    <div className={styles.App}>
+      <h4 className={styles.Title}>Hello, {props.name}!</h4>
+      <div className={styles.Body}>
+        <span>This is a simple React App rendered by Hypernova.</span>
+      </div>
+      <div className={styles.Buttons}>
+        <button onClick={handleClick}>Alert Me</button>
+      </div>
     </div>
   );
 }

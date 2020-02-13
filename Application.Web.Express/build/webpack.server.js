@@ -7,12 +7,13 @@ const common = require("./webpack.common");
 module.exports = merge(common, {
   name: "server",
   entry: {
-    server: "./src/index.ts"
+    hypernovaServer: "./src/hypernovaServer.ts",
+    staticServer: "./src/staticServer.ts",
   },
   output: {
     path: path.join(__dirname, "..", "dist/server"),
     publicPath: "/server",
-    filename: "index.js"
+    filename: "[name].js"
   },
   target: "node",
   node: {
