@@ -82,7 +82,7 @@ namespace Hypernova.Net.TagHelpers
 
             output.TagName = null;
             output.TagMode = TagMode.StartTagAndEndTag;
-            output.Content.SetHtmlContent($"<script src='{this.Configuration.Uri}/{Component}.js'></script>");
+            output.Content.SetHtmlContent($"<script src='{this.Configuration.Uri}/{this.Configuration.ClintScriptEndpoint}/{Component}.js'></script>");
 
             return base.ProcessAsync(context, output);
         }
