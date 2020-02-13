@@ -1,14 +1,10 @@
 import express from "express";
-import hypernova from // HypernovaContext
-"hypernova/server";
+import hypernova from "hypernova/server";
 import path from "path";
 
 import modules from "./modules";
 
-const getComponentFromContext = (
-  componentName: string
-  // context: HypernovaContext<{ framework: string }>
-): NodeRequire | null => {
+const getComponentFromContext = (componentName: string): NodeRequire | null => {
   return modules[componentName];
 };
 

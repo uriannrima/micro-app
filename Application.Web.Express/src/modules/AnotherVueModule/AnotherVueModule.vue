@@ -18,7 +18,7 @@ export default {
   },
   methods: {
     handleClick() {
-      alert("Hello from Vue!");
+      alert("Hello from another Vue module!");
     }
   }
 };
