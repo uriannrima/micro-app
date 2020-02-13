@@ -4,6 +4,7 @@ const merge = require("webpack-merge");
 const common = require("./webpack.common");
 
 module.exports = merge(common, {
+  name: "server",
   output: {
     path: path.join(__dirname, "..", "dist/server"),
     publicPath: "/server",

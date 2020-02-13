@@ -5,7 +5,7 @@ const common = require("./webpack.common.js");
 const { getHypernovaComponents } = require("./utils");
 
 module.exports = merge(common, {
-  name: "Client",
+  name: "client",
   output: {
     path: path.join(__dirname, "..", "dist/client"),
     publicPath: "/client",

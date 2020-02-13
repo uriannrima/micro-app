@@ -45,7 +45,7 @@ module.exports = {
   plugins: [new CleanWebpackPlugin(), new VueLoaderPlugin()],
   // Extensions to add automatically to the end of a import
   resolve: {
-    extensions: [".ts", ".tsx", ".js", ".jsx", ".json"]
+    extensions: [".ts", ".tsx", ".js", ".jsx"]
   },
   // Required to Server Side Rendering in Node
   externals: [nodeExternals()],
