@@ -1,0 +1,23 @@
+.App {
+  background-color: #61dbfb;
+  color: white;
+  padding: 1em;
+}
+
+.Title {
+  text-align: center;
+}
+
+.Body,
+.Buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Body {
+  margin-bottom: 1em;
+}
+
+.Body > span {
+  text-align: center;
+}

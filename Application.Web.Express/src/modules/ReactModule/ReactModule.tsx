@@ -1,6 +1,5 @@
 import React from "react";
 
-// import "./ReactModule.css";
 import styles from "./ReactModule.module.css";
 
 function ReactModule(props: { name: string }): React.ReactElement {
